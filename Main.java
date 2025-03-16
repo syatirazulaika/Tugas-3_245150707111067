@@ -5,12 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sytr = new Scanner(System.in);
-        
-        // Menampilkan informasi perusahaan logistik
+
         EkspedisiBarang.displayInfoLogistik();
         System.out.println();
 
-        // Input data dari user
         System.out.print("Masukkan Nama Pengirim: ");
         String nama = sytr.nextLine();
         System.out.print("Masukkan Alamat Tujuan: ");
@@ -20,12 +18,10 @@ public class Main {
         System.out.print("Masukkan Biaya Dasar: ");
         double biayaDasar = sytr.nextDouble();
 
-        // Membuat objek dengan data inputan
         EkspedisiBarang pengiriman = new EkspedisiBarang(nama, alamat, berat, biayaDasar);
         pengiriman.displayInfoPengiriman();
         System.out.println();
 
-        // Menguji Overloaded Method
         System.out.print("Masukkan diskon persentase: ");
         double diskon = sytr.nextDouble();
         System.out.println("Ongkir setelah diskon " + diskon + "%: Rp " + pengiriman.hitungOngkir(diskon));
